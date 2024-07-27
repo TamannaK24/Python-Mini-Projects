@@ -43,13 +43,14 @@ def main():
     answer = calculate(operation, numOne, numTwo)
 
     print(f"The result of {numOne} {operation} {numTwo} is: {answer}")
+    
 
+print("Hello! Welcome to the calculator app ^_^")
+print("Please enter you equation in the format once prompted: 4 * 2")
 while True: 
-    print("Hello! Welcome to the calculator app ^_^")
-    print("Please enter you equation in the format once prompted: 4 * 2")
     print("You may use one of the five operations [* / % + -]")
     main() 
-    playAgain = input("Exit calculator (Y/N)?").strip().upper() 
+    playAgain = input("Exit calculator (Y/N)? ").strip().upper() 
     if playAgain == "Y":
         break
     elif playAgain == "N": 
