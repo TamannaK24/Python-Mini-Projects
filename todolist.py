@@ -1,5 +1,3 @@
-taskList = {}
-
 def addTasks(taskList, task): 
     taskNum = len(taskList) + 1
     taskList[taskNum] = task   
@@ -14,14 +12,14 @@ def printTasks(taskList):
     if not taskList:
         print("No tasks available.")
     else: 
-        print(taskList)
         for task_id, task in taskList.items():
             print(f"{task_id}: {task}")
 
+taskList = {} 
 
 def main():
     global taskList 
-    answer = input("Type 'A' to add a task, 'D' to delete a task, or 'V' to view task list. ").strip()
+    answer = input("Type 'A' to add a task, 'D' to delete a task, 'V' to view task list, or 'Q' to exit. ").strip().upper() 
     if (answer == "A"):
         task = input("Please enter your task: ")
         addTasks(taskList, task)
@@ -33,6 +31,8 @@ def main():
         printTasks(taskList)
     elif (answer == 'V'):
         printTasks(taskList)
+    elif (answer == 'Q'):
+        quit() 
     else:
         print("Please enter a valid character.")
 
